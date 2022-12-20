@@ -1,0 +1,1 @@
+plugin_newsletter:plugin_wishlist:app_storefront_base
