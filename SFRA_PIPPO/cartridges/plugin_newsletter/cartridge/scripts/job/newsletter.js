@@ -3,9 +3,11 @@ var service = require('~/cartridge/scripts/service/subscribe');
 
 function execute() {
     
-    var newNewsletterFormObj = CustomObjectMgr.queryCustomObjects('Newsletter_Forms', "custom.email = *", null);
+    var newNewsletterFormObj
     var email;
     var response;
+
+    newNewsletterFormObj = CustomObjectMgr.queryCustomObjects('Newsletter_Forms', "custom.email = *", null);
     
     while (newNewsletterFormObj.hasNext()) {
 

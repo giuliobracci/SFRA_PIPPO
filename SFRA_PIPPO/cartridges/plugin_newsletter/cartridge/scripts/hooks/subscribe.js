@@ -3,9 +3,11 @@ var CustomObjectMgr = require('dw/object/CustomObjectMgr');
 
 function subscribe(email) { 
 
-    var email = email.toLowerCase();
-    var result;
+    var email
+    var result
+    var newNewsletterForm
 
+    email = email.toLowerCase();
     result = CustomObjectMgr.queryCustomObjects('Newsletter_Forms', "custom.email = {0}", email)
 
     if (result.hasNext()) {
@@ -13,13 +15,12 @@ function subscribe(email) {
     }
 
     try {
-        var newNewsletterForm = CustomObjectMgr.createCustomObject('Newsletter_Forms', email);
+        newNewsletterForm = CustomObjectMgr.createCustomObject('Newsletter_Forms', email);
     } catch (err) { 
         throw new Error(err.message)
     }
 
-    return
-    
+    return  
 }
 
 module.exports = {
