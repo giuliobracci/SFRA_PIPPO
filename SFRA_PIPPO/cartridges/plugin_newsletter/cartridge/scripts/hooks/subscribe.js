@@ -17,6 +17,8 @@ function subscribe(email) {
     } catch (err) { 
         throw new Error(err.message)
     }
+
+    return
     
 }
 
