@@ -4,7 +4,7 @@ var CustomObjectMgr = require('dw/object/CustomObjectMgr');
 function subscribe(email) { 
 
     var email = email.toLowerCase();
-    var result
+    var result;
 
     result = CustomObjectMgr.queryCustomObjects('Newsletter_Forms', "custom.email = {0}", email)
 
