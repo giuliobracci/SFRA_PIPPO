@@ -21,11 +21,10 @@ function execute() {
             CustomObjectMgr.remove(email);
         } catch (err) {
             throw new Error('Could not remove email from Newsletter form');
-        }
-
-        return PIPELET_NEXT;
+        }    
     }
     newNewsletterFormObj.close();
+    return PIPELET_NEXT;
 }
 
 
