@@ -1,0 +1,1 @@
+custom_cartridge:plugin_newsletter:plugin_wishlist:app_storefront_base
