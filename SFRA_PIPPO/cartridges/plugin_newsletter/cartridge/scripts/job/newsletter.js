@@ -1,3 +1,5 @@
+'use strict';
+
 var CustomObjectMgr = require('dw.object.customObjectMgr');
 var service = require('~/cartridge/scripts/service/subscribe');
 
