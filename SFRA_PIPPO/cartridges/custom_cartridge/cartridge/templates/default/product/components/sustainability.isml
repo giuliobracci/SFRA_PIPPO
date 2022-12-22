@@ -1,0 +1,33 @@
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addCss('/css/product/components.css');
+    </isscript>
+<isif condition="${pdict.product.biodegradability > 90 && pdict.product.Co2 > 5}">
+    <div class="container">
+      <h3> ${Resource.msg('text.sustainability.title','product',null)}</h3>
+      <div class="props-container-green">
+        <p> ${Resource.msgf('text.sustainability.biodegradability','product', pdict.product.biodegradability)} </p>
+        <p>${Resource.msgf('text.sustainability.Co2','product', pdict.product.Co2)} </p>
+      </div>
+    </div>
+</isif>
+
+<isif condition="${pdict.product.biodegradability < 90 || pdict.product.Co2 < 5}">
+    <div class="container">
+      <h3> ${Resource.msg('text.sustainability.title','product',null)}</h3>
+      <div class="props-container-yellow">
+        <p> ${Resource.msgf('text.sustainability.biodegradability','product', pdict.product.biodegradability)} </p>
+        <p>${Resource.msgf('text.sustainability.Co2','product', pdict.product.Co2)} </p>
+      </div>
+    </div>
+</isif>
+
+<isif condition="${pdict.product.biodegradability < 90 && pdict.product.Co2 < 5}">
+    <div class="container">
+      <h3> ${Resource.msg('text.sustainability.title','product',null)}</h3>
+      <div class="props-container-orange">
+        <p> ${Resource.msgf('text.sustainability.biodegradability','product', pdict.product.biodegradability)} </p>
+        <p>${Resource.msgf('text.sustainability.Co2','product', pdict.product.Co2)} </p>
+      </div>
+    </div>
+</isif>
