@@ -1,8 +1,5 @@
-// ci arriva contactDetails che contiene i seguenti campi
-// [myForm.contactFirstName, myForm.contactLastName, myForm.contactEmail, myForm.contactTopic, myForm.contactComment];
-// mail a cui inviarla ecommerce@pippo.online
-var Email = require('dw.net.Mail')
 
+var Email = require('dw.net.Mail')
 
 function subscribe(contactDetails) {
     
